@@ -1,0 +1,126 @@
+@import "../../variables";
+
+.WrapperTodo {
+  background-color: #F4F8FF;
+  padding: 4px;
+  border-radius: 7px;
+}
+
+.TodoItem {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 10px;
+
+  .checkbox {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    transform: translateY(24%);
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  .description,
+  .title {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+
+  .title {
+    margin: 0;
+    color: #3D8FEC;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline;
+
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  .dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+
+    p {
+      font-size: 13px;
+      color: $green-color;
+      margin: 0;
+    }
+  }
+
+  .tags {
+    display: flex;
+    gap: 4px;
+
+    .tag {
+      overflow: hidden;
+      height: 20px;
+      position: relative;
+      z-index: 1;
+      padding-right: 10px;
+      line-height: 1;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 6px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        text-align: center;
+        position: relative;
+        height: 100%;
+      }
+
+      &:nth-child(1) {
+        span {
+          background-color: #B233A6;
+          color: #fff;
+        }
+      }
+
+      &:nth-child(2) {
+        span {
+          background-color: $background-grey;
+          color: #616C82;
+
+          &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 20px;
+            border-radius: 4px;
+            height: 20px;
+            right: calc(-20px * 0.7);
+            top: 50%;
+
+            z-index: -1;
+            background-color: $background-grey;
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

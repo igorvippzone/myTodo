@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.TodoList {
+  height: calc(100% - $height-header);
+  overflow: auto;
+
+
+  &::-webkit-scrollbar {
+    width: 10px;
+
+  }
+  &::-webkit-scrollbar-track {
+    background: #dfdfdf;
+    border-radius:4px ;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #c8c8c8;
+    border-radius: 4px;
+    border: 2px solid #a1a1a1;
+  }
+}
