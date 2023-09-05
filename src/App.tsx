@@ -53,8 +53,6 @@ function App() {
         setTodos(cloneArr)
     }
 
-
-    console.log(todos)
     return (
         <div className={style.App}>
             <Header page={page}/>
