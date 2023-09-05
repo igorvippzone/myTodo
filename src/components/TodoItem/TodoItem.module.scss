@@ -20,9 +20,9 @@
     margin-right: 8px;
     cursor: pointer;
     position: absolute;
-    top:10px;
-    left: 10px;
-;  }
+    top: 10px;
+    left: 10px;;
+  }
 
   .description,
   .title {
@@ -69,6 +69,19 @@
       font-size: 13px;
       color: $green-color;
       margin: 0;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+
     }
   }
 

@@ -17,7 +17,7 @@ function App() {
             setIsLoading(true)
             const nextPage = page + 1
             const result: AxiosResponse<ITodoFetch[]> = await axios.get(`https://jsonplaceholder.typicode.com/todos?_page=${nextPage}`)
-            if(result.data.length === 0){
+            if (result.data.length === 0) {
                 setIsLastPage(true)
                 throw new Error('Ошибка, получен пустой массив')
             }
@@ -42,7 +42,7 @@ function App() {
     }, [isLoading, getTodos])
 
     const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
-        if(isLastPage) return
+        if (isLastPage) return
         const scrollHeight = e.currentTarget.scrollHeight
         const scrollTop = e.currentTarget.scrollTop
         const clientHeight = e.currentTarget.clientHeight
