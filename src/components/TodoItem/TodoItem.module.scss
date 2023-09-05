@@ -10,6 +10,7 @@
   background-color: #fff;
   border-radius: 7px;
   padding: 10px;
+  position: relative;
 
   .checkbox {
     margin: 0;
@@ -18,7 +19,10 @@
     transform: translateY(24%);
     margin-right: 8px;
     cursor: pointer;
-  }
+    position: absolute;
+    top:10px;
+    left: 10px;
+;  }
 
   .description,
   .title {
@@ -41,12 +45,12 @@
     color: #3D8FEC;
     font-size: 14px;
     font-weight: 600;
-    display: inline;
 
-    -ms-line-clamp: 2;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     margin-bottom: 8px;
+    text-indent: 20px
   }
 
   .description {
