@@ -11,16 +11,6 @@ function App() {
     const [page, setPage] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() => {
-        setIsLoading(true)
-    }, [])
-
-    useEffect(() => {
-        if (isLoading) {
-            getTodos()
-        }
-    }, [isLoading])
-
     const getTodos = async () => {
         try {
             setIsLoading(true)
@@ -35,6 +25,16 @@ function App() {
             setIsLoading(false)
         }
     }
+
+    useEffect(() => {
+        setIsLoading(true)
+    }, [])
+
+    useEffect(() => {
+        if (isLoading) {
+            getTodos()
+        }
+    }, [isLoading, getTodos])
 
     const scrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
         const scrollHeight = e.currentTarget.scrollHeight
@@ -53,6 +53,8 @@ function App() {
         setTodos(cloneArr)
     }
 
+
+    console.log(todos)
     return (
         <div className={style.App}>
             <Header page={page}/>
